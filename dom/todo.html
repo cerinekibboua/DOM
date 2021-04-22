@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./todo.css">
+</head>
+<body>
+    <div id="div" class="Div">
+        <h1>To Do List</h1>
+        <input type="text" id="Input" placeholder="Title...">
+        <span onclick="newElement()" class="Btn">Add</span>
+    </div>
+    <ul id="list">
+        <li>1</li>
+        <li class="checked">2</li>
+        <li>3</li>
+    </ul>
+   <script>
+       function newElement(){
+         
+        var li = document.createElement("li");
+        var inputValue = document.getElementById("Input").value;
+        var x = document.createTextNode(inputValue)
+        li.appendChild(x);
+        if (inputValue === '') {
+             alert("You must write something");
+         } 
+        else {
+           
+             document.querySelector("#list").appendChild(li);
+         }
+             document.getElementById("Input").value = "";
+
+             var span = document.createElement("SPAN")
+             var txt = document.createTextNode("\u00D7")
+             span.className="close"
+             span.appendChild(txt);
+             li.appendChild(span);
+             for (i = 0; i < close.length; i++) {
+             close[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = "none";
+              }
+               }  
+
+     }
+  var nodelist=document.getElementsByTagName("LI")
+  var i;
+  for (i = 0; i < nodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  nodelist[i].appendChild(span);
+}
+
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+   </script>
+</body>
+</html>

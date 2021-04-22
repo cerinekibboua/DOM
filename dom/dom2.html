@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+    <html>
+<head>
+<title>JavaScript</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Go MyCode challenges in 2021</h1>
+        <h2>learning JavaScript Challenge</h2>
+        <ul>
+            <li>HTML Challenge Done</li>
+            <li>CSS Challenge Done</li>
+            <li>javaScript Challenge Coming</li>
+            <li>Git/Github Challenge Ongoing </li>
+            <li>Reactjs Challenge Coming</li>
+            <li>Back-end with NodeJS and Express Challenge Coming</li>
+            <li>DataBase with MongDB Challenge Coming</li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    // window.onload = function(){
+
+    // var x = document.getElementById("li1");
+    // x.style.color = "blue";
+
+    // function changeColor(){
+    //     if (x.style.color == "blue"){
+    //         x.style.color = "red";
+    //     }
+    //     else if (x.style.color == "red"){
+    //         x.style.color = "blue";
+    //     }
+    // };
+    // window.setInterval(changeColor,1000);
+    // };
+    // var i=0;
+    // function change(){
+    //     var doc = document.querySelector('h1');
+    //     var color = ["blue","red","green","yellow","pink"];
+    //     doc.style.color=color[i];
+    //     i = (i+1) % color.lenght;
+    // }
+    // setInterval(change,1000);
+
+ 
+
+        let list = document.querySelectorAll("li");
+        for(i=0;i< list.length ;i++){
+             console.log( list[i].textContent);
+            if(list[i].textContent.includes("Done")){
+                list[i].style.color= "red";
+            }
+            else if (list[i].textContent.includes("Coming")){
+                list[i].style.color= "green";
+            }
+            else{
+                list[i].style.color= "yellow";
+
+            }
+            }
+</script>
+</html>

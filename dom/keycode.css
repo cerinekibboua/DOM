@@ -1,0 +1,27 @@
+body{
+    font-family: "B612 Mono", monospace;
+    text-align: center;
+}
+h2 {
+    font-size: 200px;
+}
+
+
+
+.boxes{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 70px;
+   
+}
+.box{
+    border: solid 2px rgb(33, 95, 54);
+    background: rgb(33, 95, 54);
+    color: rgb(255, 255, 255);
+    width: 20%;
+    margin: 10px;
+    text-align: center;
+}
